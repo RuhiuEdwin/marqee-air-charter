@@ -1,13 +1,13 @@
 @import url(./global.css);
 
 .navbar{
-    height: 8vh;
+    height: 10vh;
     padding: 0.5rem calc((100vw - 1300) / 2);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-top: 2vw;
+    background-color: var(--white);
 }
 .navbar_menu{
     padding-right: 5vw;
@@ -224,7 +224,7 @@
     margin-top: 5vw;
     display: flex;
     gap: .5rem;
-    width: 100vw;
+    width: 96vw;
     overflow: scroll;
 }
 .fleet{
@@ -249,12 +249,6 @@
     padding: 3vw;
     border-radius: .5vw;
 }
-.service-wrapper{
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    gap: 1rem;
-}
 .service{
     display: flex;
     width: 100%;
@@ -267,7 +261,7 @@
 .service-wrapper{
     display: flex;
     gap: 1rem;
-    width: 100vw;
+    width: 96vw;
     overflow-x: scroll;
 }
 .service{
@@ -331,20 +325,20 @@
     overflow:hidden;
     background:none!important;
     height:25vh;
-    width:100vw;
+    width:90vw;
 }
 .mapouter{
     position:relative;
     text-align:right;
     height:25vh;
-    width:100vw;
+    width:90vw;
 }
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90vw;
     color: var(--darkest);
     background-color: var(--bg);
     padding: 1vw;
@@ -394,6 +388,10 @@ form textarea{
     font-weight: bold;
 }
 @media screen and (min-width: 800px){
+    .about-info,
+    .counter-main{
+        width: 70%;
+    }
     .abouttwo{
         flex-direction: row;
         gap: 0;
@@ -405,7 +403,6 @@ form textarea{
         width: 80vw;
         align-items: center;
         justify-content: center;
-        margin-left: 10vw;
         overflow: hidden;
     }
     .serviceimg,
@@ -484,7 +481,10 @@ form textarea{
 .fleet-main:nth-child(odd) {
     background: var(--bg);
 }
-.fleet-main .fleetimg:nth-child(even) {
+.fleet-main:nth-child(even) .fleetinfo{
+    order: -1;
+}
+.servicemain:nth-child(even) .servicedesc{
     order: -1;
 }
 .fleets{
@@ -506,6 +506,7 @@ form textarea{
     .fleet-main{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .fleetdesc{
         width: 90vw;
@@ -514,5 +515,11 @@ form textarea{
     .fleetinfo{
         width: 80%;
         padding-bottom: 2vw;
+    }
+    .fleet-main:nth-child(even) .fleetinfo{
+        order: 1;
+    }
+    .servicemain:nth-child(even) .servicedesc{
+        order: 1;
     }
 }
