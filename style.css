@@ -283,6 +283,12 @@
     width: 90vw;
 }
 .contact{
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    align-items: center;
+}
+.contact-header{
     background: linear-gradient(to right, rgba(6, 70, 99, .9), rgba(6, 70, 99, .9)),
     url(./Assets/Images/Beechcraft\ King\ Air\ 200\ -\ Cabin\ 2_0.jpg);
     background-position: center;
@@ -292,11 +298,15 @@
     flex-direction: column;
     padding: 5vw;
     align-items: center;
-    padding-top: 10vw;
 }
-.socials,
+.contact-wrapper{
+    background-color: var(--darkest);
+    display: flex;
+    flex-direction: column;
+}
 .contact-info{
     color: var(--white);
+    background-color: var(--darkest);
 }
 .contact-btn{
     padding: 1vw 2vw;
@@ -305,6 +315,18 @@
     color: var(--white);
     font-weight: bold;
     border-radius: .5vw;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:25vh;
+    width:100vw;
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:25vh;
+    width:100vw;
 }
 .footer{
     padding: 5vw;
@@ -369,6 +391,16 @@
     .perks-wrapper{
         grid-template-columns: repeat(4, 1fr);
     }
+    
+    .contact-wrapper{
+        flex-direction: row;
+    }
+    .contact-info,
+    .mapouter,
+    .gmap-canvas,
+    .form{
+        width: 33vw;
+    }
     .footer-wrapper{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -432,14 +464,6 @@
 .fleetdesc{
     width: 50vw;
 }
-
-.contact-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-}
 form{
     display: flex;
     flex-direction: column;
@@ -478,6 +502,6 @@ form textarea{
         width: 70vw;
     }
     form{
-        width: 80vw;
+        width: 100vw;
     }
 }
