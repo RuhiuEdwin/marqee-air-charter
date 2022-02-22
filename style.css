@@ -285,8 +285,10 @@
 .contact{
     display: flex;
     flex-direction: column;
-    padding: 5vw;
+    padding-bottom: 5vw;
     align-items: center;
+    background-color: var(--darkest);
+    width: 100%;
 }
 .contact-header{
     background: linear-gradient(to right, rgba(6, 70, 99, .9), rgba(6, 70, 99, .9)),
@@ -298,10 +300,10 @@
     flex-direction: column;
     padding: 5vw;
     align-items: center;
-    width: 100%;
+    width: 89%;
+    overflow: none !important;
 }
 .contact-wrapper{
-    background-color: var(--darkest);
     display: flex;
     flex-direction: column;
     justify-content: center;
