@@ -298,15 +298,24 @@
     flex-direction: column;
     padding: 5vw;
     align-items: center;
+    width: 100%;
 }
 .contact-wrapper{
     background-color: var(--darkest);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
 }
 .contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: var(--white);
     background-color: var(--darkest);
+    height: 25vh;
 }
 .contact-btn{
     padding: 1vw 2vw;
@@ -327,6 +336,24 @@
     text-align:right;
     height:25vh;
     width:100vw;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--darkest);
+    background-color: var(--bg);
+    padding: 1vw;
+}
+form input,
+form textarea{
+    width: 70vw;
+}
+.names,
+.emailaddress{
+    margin: 1vw 0;
 }
 .footer{
     padding: 5vw;
@@ -391,15 +418,23 @@
     .perks-wrapper{
         grid-template-columns: repeat(4, 1fr);
     }
-    
     .contact-wrapper{
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3.5vw;
     }
-    .contact-info,
     .mapouter,
-    .gmap-canvas,
-    .form{
-        width: 33vw;
+    .gmap_canvas{
+        width: 30vw;
+        height: 50vh;
+    }
+    .contact-info
+    form{
+        width: 30vw;
+    }
+    form input,
+    form textarea{
+        width: 30vw;
     }
     .footer-wrapper{
         display: grid;
@@ -464,26 +499,7 @@
 .fleetdesc{
     width: 50vw;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--darkest);
-    background-color: var(--bg);
-    padding: 2vw;
-}
-form input,
-form textarea{
-    width: 30vw;
-    border: none;
-    padding: 1vw;
-    margin: .3vw 0;
-}
-.names,
-.emailaddress{
-    margin: 1vw 0;
-}
+
 @media screen and (max-width: 500px){
     .fleet-main{
         display: flex;
@@ -496,12 +512,5 @@ form textarea{
     .fleetinfo{
         width: 80%;
         padding-bottom: 2vw;
-    }
-    form input,
-    form textarea{
-        width: 70vw;
-    }
-    form{
-        width: 100vw;
     }
 }
