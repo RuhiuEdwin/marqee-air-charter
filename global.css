@@ -1,0 +1,30 @@
+*{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    --white:#F7F6F2;
+    --bg:#EEEBDD;
+    --blue:#064663;
+    --dark: #04293A;
+    --darkest: #041C32;
+    --gold: #ECB365;
+    text-align: center;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blue);
+}
+h1{
+    font-size: calc(1rem + 2vw);
+}
+h2{
+    font-size: calc(1rem + 1.2vw);
+}
+p{
+    font-size: calc(.8rem + .3vw);
+}
+button{
+    border: none;
+}

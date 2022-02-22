@@ -1,0 +1,483 @@
+@import url(./global.css);
+
+.navbar{
+    height: 8vh;
+    padding: 0.5rem calc((100vw - 1300) / 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 2vw;
+}
+.navbar_menu{
+    padding-right: 5vw;
+}
+.navbar_logo{
+    max-width: 200px;
+    width: 20vw;
+}
+.navbar_logo img{
+    width: 100%;
+}
+.active{
+    color: red;
+}
+.navbar_link{
+    color: var(--darkest);
+    text-decoration: none;
+    padding: 0rem 1rem;
+}
+.navbar_link:hover{
+    color: var(--blue);
+}
+.fixed{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 20;
+}
+@media screen and (max-width: 768px) {
+    body.active{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .navbar_link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar_menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,100px);
+        position: absolute;
+        width: 100%;
+        top: -1000px;
+    }
+    .navbar_menu.active{
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        height: 100vh;
+        font-size: 1.5rem;
+        background: var(--bg);
+    }
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: var(--darkest);
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(236, 179, 101, .8), rgba(238, 235, 221, .3)),
+    url(./Assets/Images/pexels-max-avans-5066355.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heromain{
+    margin-bottom: 50px;
+}
+.cta{
+    padding: 1vw 2vw;
+    background-color: var(--dark);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: .5vw;
+}
+.services,
+.about{
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+}
+.counter{
+    background-color: var(--darkest);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+    color: var(--white);
+}
+.numbers-wrapper{
+    background-color: var(--white);
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+}
+.number{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gold);
+    width: 25vw;
+    height: 23vh;
+    border-radius: .5vw;
+}
+.title{
+    margin-bottom: 5vw;
+    position: relative;
+}
+.about-info{
+    padding: 0.5rem calc((100vw - 1200) / 2);
+    margin-bottom: 5vw;
+}
+.about a{
+    padding: 1vw 2vw;
+    background-color: var(--gold);
+    border-radius: .5vw;
+}
+.perks-wrapper{
+    padding: 0.5rem calc((100vw - 1600) / 2);
+}
+.perk h5{
+    color: var(--gold);
+}
+.perks h2{
+    color: var(--bg);
+}
+.perk p{
+    color: var(--darkest);
+}
+.perk,
+.perks{
+    margin: 5vw 0;
+}
+.abouttwo{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+}
+.mission{
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(6, 70, 99, .8), rgba(6, 70, 99, .3)),
+    url(./Assets/Images/philip-myrtorp-iiqpxCg2GD4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vw;
+}
+.mission p{
+    color: var(--white);
+    margin: 5vw 0;
+}
+.vision{
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(236, 179, 101, .8), rgba(238, 235, 221, .3)),
+    url(./Assets/Images/pexels-nguyen-hung-11150267.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vw;
+}
+.vision p{
+    color: var(--white);
+    margin: 5vw 0;
+}
+.fleets{
+    padding: 5vw 0;
+}
+.fleet-wrapper{
+    margin-top: 5vw;
+    display: flex;
+    gap: .5rem;
+    width: 100vw;
+    overflow: scroll;
+}
+.fleet{
+    position: relative;
+}
+.fleet h2{
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    color: var(--white);
+}
+.fleetimg{
+    width: 80vw;
+}
+.perks-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+.perk{
+    background-color: var(--bg);
+    padding: 3vw;
+    border-radius: .5vw;
+}
+.service-wrapper{
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    gap: 1rem;
+}
+.service{
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    color: var(--white);
+}
+.services{
+    padding: 10vw 0;
+}
+.service-wrapper{
+    display: flex;
+    gap: 1rem;
+    width: 100vw;
+    overflow-x: scroll;
+}
+.service{
+    position: relative;
+}
+.service h2{
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    color: var(--white);
+}
+.serviceimg{
+    width: 90vw;
+}
+.contact{
+    background: linear-gradient(to right, rgba(6, 70, 99, .9), rgba(6, 70, 99, .9)),
+    url(./Assets/Images/Beechcraft\ King\ Air\ 200\ -\ Cabin\ 2_0.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    align-items: center;
+    padding-top: 10vw;
+}
+.socials,
+.contact-info{
+    color: var(--white);
+}
+.contact-btn{
+    padding: 1vw 2vw;
+    margin: 5vw;
+    background-color: var(--gold);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: .5vw;
+}
+.footer{
+    padding: 5vw;
+    background-color: var(--blue);
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer-location{
+    color: var(--white);
+}
+.footer-logo{
+    width: 50%;
+}
+.footer-logo img{
+    width: 100%;
+}
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.subscribe input{
+    border: none;
+    background-color: var(--white);
+    padding: 2vw;
+}
+.submit{
+    padding: 2vw;
+    background-color: var(--darkest);
+    color: var(--white);
+    font-weight: bold;
+}
+@media screen and (min-width: 800px){
+    .abouttwo{
+        flex-direction: row;
+        gap: 0;
+    }
+    .fleet-wrapper,
+    .service-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10vw;
+        overflow: hidden;
+    }
+    .serviceimg,
+    .fleetimg{
+        width: 40vw;
+    }
+    .service h2,
+    .fleet h2{
+        bottom: 0;
+        left: 0;
+    }
+    .perks-wrapper{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0.5rem calc((100vw - 1600px) / 2);
+    }
+    .footer-logo{
+        width: 10vw;
+    }
+    .subscribe h2{
+        font-size: 1.2rem;
+    }
+    .subscribe input,
+    .submit{
+        padding: 1vw;
+    }
+    .servicemain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .servicedesc:nth-child(even){
+        order: -1;
+    }
+}
+.fleet-main{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2vw;
+}
+.fleetmain-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.servicedesc{
+    padding: 2vw;
+}
+.servicedesc h2{
+    margin-bottom: 2vw;
+}
+.servicemain:nth-child(odd) {
+    background: var(--white);
+}
+.fleet-main:nth-child(odd) {
+    background: var(--bg);
+}
+.fleet-main .fleetimg:nth-child(even) {
+    order: -1;
+}
+.fleets{
+    margin-top: 10vw;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fleetinfo{
+    text-align: left;
+}
+.fleetdesc{
+    width: 50vw;
+}
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkest);
+    background-color: var(--bg);
+    padding: 2vw;
+}
+form input,
+form textarea{
+    width: 30vw;
+    border: none;
+    padding: 1vw;
+    margin: .3vw 0;
+}
+.names,
+.emailaddress{
+    margin: 1vw 0;
+}
+@media screen and (max-width: 500px){
+    .fleet-main{
+        display: flex;
+        flex-direction: column;
+    }
+    .fleetdesc{
+        width: 90vw;
+        margin: 5vw 2vw;
+    }
+    .fleetinfo{
+        width: 80%;
+        padding-bottom: 2vw;
+    }
+    form input,
+    form textarea{
+        width: 70vw;
+    }
+    form{
+        width: 80vw;
+    }
+}
