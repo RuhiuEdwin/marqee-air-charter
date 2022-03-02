@@ -93,7 +93,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, rgba(236, 179, 101, .8), rgba(238, 235, 221, .3)),
+    background: linear-gradient(to right, rgba(6, 70, 99, .8), rgba(6, 70, 99, .3)),
     url(./Assets/Images/pexels-max-avans-5066355.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -393,8 +393,8 @@ form textarea{
         width: 70%;
     }
     .abouttwo{
-        flex-direction: row;
-        gap: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
     .fleet-wrapper,
     .service-wrapper{
@@ -422,14 +422,13 @@ form textarea{
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 3.5vw;
     }
+    
+    .contact-info,
+    form,
     .mapouter,
     .gmap_canvas{
         width: 30vw;
         height: 50vh;
-    }
-    .contact-info
-    form{
-        width: 30vw;
     }
     form input,
     form textarea{
