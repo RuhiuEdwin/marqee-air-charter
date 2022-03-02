@@ -217,6 +217,18 @@
     color: var(--white);
     margin: 5vw 0;
 }
+.contact-link{
+    color: var(--white);
+    font-weight: normal;
+}
+.contact-link:hover{
+    color: var(--gold);
+}
+.contact-icon{
+    width: 2vw;
+    min-width: 20px;
+    margin-right: 20px;
+}
 .fleets{
     padding: 5vw 0;
 }
@@ -386,6 +398,14 @@ form textarea{
     background-color: var(--darkest);
     color: var(--white);
     font-weight: bold;
+}
+.email-info,
+.phone-info,
+.pin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
 }
 @media screen and (min-width: 800px){
     .about-info,
